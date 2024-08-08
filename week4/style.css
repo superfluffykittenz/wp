@@ -1,0 +1,47 @@
+body {
+  font-family: "Roboto", arial, system-ui;
+}
+
+header h1 {
+  color: red;
+  font-size: 36pt;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Fascinate Inline", arial, system-ui;
+}
+
+nav a {
+  display: inline-block;
+  position: relative;
+
+  & span {
+    position: relative;
+    top: 5px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, label {
+  font-family: "Lilita One", arial, system-ui;
+}
+
+main p {
+  color: rgb(24, 26, 43); 
+  text-align: justify;
+  font-size:20pt; 
+  line-height:30pt;
+  max-width: 700px;
+  border: 1px solid hsl(240, 58%, 35%);
+  border-left-width: 10px;
+  padding: 10px 10px 10px 20px;
+  background-color: hsl(240, 2%, 91%)
+}
+
+#firstp {
+  color: rgb(0, 195, 255); 
+  font-size: initial;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+/* specificity */
