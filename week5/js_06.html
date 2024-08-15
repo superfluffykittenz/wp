@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>My Web Page</title>
+	<meta charset=utf-8>
+	<script>
+		let books = [
+			{
+				title: "Let the Right One In",
+				author: "John Ajvide Lindqvist",
+				published: 2005
+			},
+			{
+				title: "Enigma",
+				author: "Hugh Seabag-Montefiore",
+				published: 2000
+			}
+	  ];  
+		let book = books[0];
+
+	</script>
+</head>
+
+<body>
+	<h1>Literal Objects</h1>
+	<p>Right click, inspect, and check the Console for output</p>
+	<script>
+		//use the . syntax to access the property of the book variable	
+		console.log(book.title);
+		console.log(book.author);
+		console.log(book.published);
+
+		// use [ ] syntax to access the property of the book variable	
+		console.log(book['title']);
+		console.log(book['author']);
+		console.log(book['published']);
+  </script>
+  <hr>
+  <script>
+		for (let b = 0; b < books.length; ++b) {
+		  document.write("<h2>" + books[b].title + "</h2>\n<p>by " + books[b].author + " (" + books[b].published + ")<p>" );
+		}
+
+		for (let b = 0; b < books.length; ++b) {
+		  document.write("<h2>" + books[b]['title'] + "</h2>\n<p>by " + books[b]['author'] + " (" + books[b]['published'] + ")<p>" );
+		}
+  </script>
+  <hr>
+	<table border="1">
+		<tr><th>Title</th><th>Author</th><th>Published</th></tr>
+	<script>
+		for (let b = 0; b < books.length; ++b) {
+		  document.write("  <tr><td>" + books[b]['title'] + "</td><td>" + books[b]['author'] + "</td><td>" + books[b]['published'] + "</td></tr>" );
+		}
+	</script>
+	</body></table>
+</body>
+
+</html>

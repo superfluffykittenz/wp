@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>My Web Page</title>
+	<meta charset=utf-8>
+	<script>
+		function checkPrime() {
+      console.log("checkprime");
+			let prime = document.getElementById("prime");
+			let primeValue = Number(prime.value);
+			let status = document.getElementById("status");
+			status.innerHTML = "";
+			console.log(primeValue);
+			console.log(typeof primeValue);
+			if (typeof primeValue == "number") {
+				if (primeValue % 1) {
+          status.innerHTML = "This needs to be an integer";
+					return;
+				}
+				if (primeValue < 2) {
+          status.innerHTML = "This needs to be 2 or more";
+					return;
+				}
+			  if (primeValue == 2) {
+          status.innerHTML = "Prime!";
+					return;
+				}
+				for (let p=2; p<primeValue; ++p ) {
+					if (primeValue % p == 0) {
+						status.innerHTML = "not prime, divisible by " + p;
+					  return;
+			  	}
+			  }
+				status.innerHTML = "Prime!";
+		}
+	}
+	</script>
+</head>
+
+<body>
+	<h1>Prime Number Checker</h1>
+	<form>
+		<label for="prime">Enter a positive integer</label>
+		<input id="prime" type="number" min="1" step="1" oninput="checkPrime()">
+		<label id="status"></label> 
+	</form>
+
+</body>
+  <script>
+		// Useful for running code after the page is loaded
+	</script>
+</html>
