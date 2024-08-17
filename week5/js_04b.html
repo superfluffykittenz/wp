@@ -5,7 +5,7 @@
 	<title>My Web Page</title>
 	<meta charset=utf-8>
 	<script>
-		function checkPrime() {
+		async function checkPrime() {
 			console.clear();
 // Read the value of an input element
 			let prime = document.getElementById("prime");
@@ -33,9 +33,10 @@
 			if (primeValue > 2) {
 // Bonus math fact: only need to check up to sqrt(primeValue)
 				for (let p=2; p<=Math.sqrt(primeValue); ++p ) {
-					console.log("  Checking if "+primeValue+" is divisible by "+p);
+					console.log("  Checking if "+primeValue+" is divisible by " + p);
 					if (primeValue % p == 0) {
 						status.innerHTML = "Not prime, divisible by " + p;
+						console.log("Not prime, divisible by " + p);
 						return;
 					}
 				}
