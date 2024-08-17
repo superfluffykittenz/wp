@@ -6,35 +6,43 @@
 	<meta charset=utf-8>
 	<script>
 		function checkPrime() {
-      console.log("checkprime");
+			console.clear();
+// Read the value of an input element
 			let prime = document.getElementById("prime");
 			let primeValue = Number(prime.value);
+      console.log("Checking "+primeValue+" which is type "+typeof primeValue);
 			let status = document.getElementById("status");
+// Set the innerHTML of a label element
 			status.innerHTML = "";
-			console.log(primeValue);
-			console.log(typeof primeValue);
-			if (typeof primeValue == "number") {
-				if (primeValue % 1) {
-          status.innerHTML = "This needs to be an integer";
-					return;
-				}
-				if (primeValue < 2) {
-          status.innerHTML = "This needs to be 2 or more";
-					return;
-				}
-			  if (primeValue == 2) {
-          status.innerHTML = "Prime!";
-					return;
-				}
-				for (let p=2; p<primeValue; ++p ) {
+// is the input numeric?
+			if (typeof primeValue != "number") {
+				status.innerHTML = "This needs to be numeric.";
+				return;
+			}
+// input is numeric but is it an integer? 		
+      if (primeValue % 1) {
+				status.innerHTML = "This needs to be an integer.";
+				return;
+			}
+// input is an integer but is it 2 or more? 				
+			if (primeValue < 2) {
+				status.innerHTML = "This needs to be 2 or more.";
+				return;
+			}
+// if input is 2, then "job done it's prime", otherwise perform a more complex check to detect non-primes
+			if (primeValue > 2) {
+// Bonus math fact: only need to check up to sqrt(primeValue)
+				for (let p=2; p<=Math.sqrt(primeValue); ++p ) {
+					console.log("  Checking if "+primeValue+" is divisible by "+p);
 					if (primeValue % p == 0) {
-						status.innerHTML = "not prime, divisible by " + p;
-					  return;
-			  	}
-			  }
-				status.innerHTML = "Prime!";
+						status.innerHTML = "Not prime, divisible by " + p;
+						return;
+					}
+				}
+			}
+// Either it is 2 or number was found to be prime.			
+			status.innerHTML = "Prime!";
 		}
-	}
 	</script>
 </head>
 
