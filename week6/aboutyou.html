@@ -5,12 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About You</title>
   <style>
+    form > div {
+      margin: 15px 0px;
+     
+    }
     input[type=text], input[type=email], input[type=tel], textarea {
       padding:10px;
       width: 245px;
       box-sizing: border-box;
       border-radius: 5px;
       border: 2px #B96 solid;
+    }
+    label.required::after {
+      content: "*";
+      color:red;
+      margin-left: 3px;
     }
     textarea {
       resize: none;
@@ -30,10 +39,14 @@
   <main>
     <h1>About You</h1>
     <form method="post" target="_blank" action="https://saturn.csit.rmit.edu.au/~e54061/wp/formtest.php">
-        <label for="fname">First Name</label><br>
-        <input id="fname" name="fname" type="text" placeholder="First Name"><br><br>
+      <div>
+        <label for="fname" class="required">First Name</label><br>
+        <input id="fname" name="fname" type="text" placeholder="First Name">
+      </div>
+      <div>
         <label for="lname">Last Name</label><br>
-        <input id="lname" name="lname" type="text" placeholder="Last Name"><br><br>
+        <input id="lname" name="lname" type="text" placeholder="Last Name">
+      </div>
         <fieldset>
           <legend>Gender</legend>
           <input id="male" name="gender" value="male" type="radio">
