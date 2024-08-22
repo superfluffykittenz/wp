@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About You</title>
+  <style>
+    input[type=text], input[type=email], input[type=tel], textarea {
+      padding:10px;
+      width: 245px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 2px #B96 solid;
+    }
+    textarea {
+      resize: none;
+    }
+    fieldset {
+      width: fit-content;
+      padding: 20px;
+      border-radius: 5px;
+      border: 2px #B96 solid;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav></nav>
+  </header>
+  <main>
+    <h1>About You</h1>
+    <form method="post" target="_blank" action="https://saturn.csit.rmit.edu.au/~e54061/wp/formtest.php">
+        <label for="fname">First Name</label><br>
+        <input id="fname" name="fname" type="text" placeholder="First Name"><br><br>
+        <label for="lname">Last Name</label><br>
+        <input id="lname" name="lname" type="text" placeholder="Last Name"><br><br>
+        <fieldset>
+          <legend>Gender</legend>
+          <input id="male" name="gender" value="male" type="radio">
+          <label for="male">Male</label>
+          <input id="female" name="gender" value="female" type="radio">
+          <label for="female">Female</label>
+          <input id="other" name="gender" value="other" type="radio">
+          <label for="other">Other</label>
+        </fieldset>
+        <br><br>
+        <label for="email">Email</label><br>
+        <input id="email" name="email" type="email" placeholder="Email"><br><br>
+        <label for="mobile">Mobile</label><br>
+        <input id="mobile" name="mobile" type="tel" pattern="04[0-9]{8}" title="Must be an Australian phone number" placeholder="Mobile Number"><br><br>
+        <label for="interests">Interests</label><br>
+        <textarea id="interests" rows="10" placeholder="Tell us about your interests ..."></textarea>
+      <br><br><br>
+      <input type="submit" name="submit" value="Go Submit!">
+      <button type="submit">Submit</button>
+
+    </form>
+
+  </main> 
+  <footer>
+
+  </footer>
+</body>
+</html>
