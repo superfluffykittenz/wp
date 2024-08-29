@@ -6,7 +6,6 @@
     <title><?= $title ?></title>
   </head>
   <body>
-  <body>
     <header>
       <h1>Week 7 Exercise <?= $exNum ?></h1>
     </header>
