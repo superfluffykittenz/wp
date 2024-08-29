@@ -16,7 +16,7 @@
 </head>
 <body>
   <?php
-    for ($i=0; $i<=count($myArray); ++$i)
+    for ($i=0; $i<count($myArray); ++$i)
       echo "<p>$myArray[$i]</p>";
     foreach ($myAssoc as $name => $age)
       echo "<p>$name is $age years old.</p>";
