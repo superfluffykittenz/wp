@@ -16,6 +16,7 @@ if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
   $password = "RMITp4ssw0rd";
   $dbname = "e54061";
   $imagePath="/home/eh1/e54061/public_html/wp/week9/images/";
+  $a2ImagePath="/home/sh1/s3954061/public_html/wp/a2/images/";
 }
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
