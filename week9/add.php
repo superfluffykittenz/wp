@@ -3,13 +3,6 @@
   $title = "Add Country";
   include("includes/header.inc"); 
 
-  //$countries = mysqli_query($conn, "select * from country");
-  // while($row = mysqli_fetch_assoc($countries)) {
-  //   echo "<pre>";
-  //   print_r($row);
-  //   echo "</pre>";
-  // }
-
 ?>
 
 <form method="post" action="add-process.php" enctype="multipart/form-data">
