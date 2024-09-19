@@ -9,11 +9,13 @@ if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
   $username = "root";
   $password = "";
   $dbname = "e54061";
+  $imagePath="/~e54061/public_html/wp/week9/images/";
 } else {
   $servername = "talsprddb02.int.its.rmit.edu.au";
   $username = "e54061";
   $password = "RMITp4ssw0rd";
   $dbname = "e54061";
+  $imagePath="/home/eh1/e54061/public_html/wp/week9/images/";
 }
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
