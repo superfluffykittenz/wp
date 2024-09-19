@@ -11,7 +11,7 @@
       ) 
   {
     echo ($_FILES['image']['tmp_name']);
-    move_uploaded_file($_FILES['image']['tmp_name'],"/Applications/XAMPP/xamppfiles/htdocs/~e54061/wp/week9/images/".$_FILES['image']['name']);
+    move_uploaded_file($_FILES['image']['tmp_name'],"/~e54061/wp/week9/images/".$_FILES['image']['name']);
   } else {
     echo "There was a problem with the file. Click here to go back";
   }
