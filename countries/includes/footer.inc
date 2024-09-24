@@ -1,5 +1,6 @@
+    </main>
     <footer>
-      &copy; Super Fluffy KittenZ 2024
+      &copy; Countries 'R Us 2024
     </footer>  
   </body>
 </html>

@@ -11,22 +11,29 @@
     !empty($_FILES['image']['name'])
   ) {
 
-/* Create a variable for each element in $_POST, ie $name, $description, $caption */
-    foreach ($_POST as $name => $value) {
-      $$name = $value;
-    }
-
 /* Add country to the database using a prepared statement */
-    $sql = "INSERT INTO country (countryname, description, image, caption) VALUES (?,?,?,?)";
+    $sql = "
+      INSERT INTO country (
+        countryname, description, image, caption
+      ) VALUES (
+        ?,?,?,?
+      )";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss",$name, $description, $_FILES['image']['name'], $caption);
+    $stmt->bind_param(
+      "ssss",
+      $_POST['countryname'], 
+      $_POST['description'], 
+      $_FILES['image']['name'], 
+      $_POST['caption']
+    );
     $stmt->execute();
     print_r($stmt->error);
 
 /* If a country was added to the database ... */
     if ($stmt->affected_rows > 0) {
+      echo "<p>Country was added to the database.</p>";
 
-/* ... try to move image from tmp folder to images folder ... */      
+/* ... move image from tmp folder to images folder ... */      
       if (move_uploaded_file($_FILES['image']['tmp_name'],$imagePath.$_FILES['image']['name'])) {
         echo "<p>File was added to the images directory.</p>";
       } else {
@@ -38,5 +45,5 @@
   } else {
     echo "<p>There is a problem with the image file.</p>";
   }
-
+  echo "<p>Return to <a heref='countries.php'>countries gallery page</a>.</p>";
 ?>

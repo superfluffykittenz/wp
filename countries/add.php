@@ -2,13 +2,12 @@
   include("includes/db_connect.inc"); 
   $title = "Add Country";
   include("includes/header.inc"); 
-
 ?>
 
 <form method="post" action="add-process.php" enctype="multipart/form-data">
   <h2>Insert New Country</h2>
-  <p><label for="name">Country Name</label><br>
-  <input type="text" name="name" id="name"></p>
+  <p><label for="countryname">Country Name</label><br>
+  <input type="text" name="countryname" id="countryname"></p>
   <p><label for="description">Country Description</label><br>
   <textarea name="description" id="description"></textarea></p>
   <p><label for="image">Country Image</label><br>
@@ -33,3 +32,5 @@
 ?>
 
 </table>
+
+<?php include("includes/footer.inc"); ?>
