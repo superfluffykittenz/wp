@@ -10,9 +10,6 @@
     <header>
       <h1>🌏🌎🌍 Countries 'R Us!</h1>
     </header>
-    <nav>
-      <a href="countries.php">Countries Gallery</a>
-      <a href="add.php">Add New Country</a>
-    </nav>
+<?php include ("nav.inc"); ?>    
     <main>    
       <h2><?= $title ?></h2>
