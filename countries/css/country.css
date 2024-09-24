@@ -53,6 +53,23 @@ footer {
   object-position: 50% 50%;
 }
 
+#countriestable {
+  border-collapse: collapse;
+    
+  & td, & tr {
+
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+
+  & img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
 label {
   display: inline-block;
   margin-bottom: 5px;

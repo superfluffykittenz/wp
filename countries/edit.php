@@ -1,11 +1,11 @@
 <?php 
   include("includes/db_connect.inc"); 
-  $title = "Add Country";
+  $title = "Edit Country";
   include("includes/header.inc"); 
 ?>
 
 <form method="post" action="add-process.php" enctype="multipart/form-data">
-  <h2>Insert New Country</h2>
+  <h2>Edit Existing Country</h2>
   <p><label for="countryname">Country Name</label><br>
   <input type="text" name="countryname" id="countryname"></p>
   <p><label for="description">Country Description</label><br>
