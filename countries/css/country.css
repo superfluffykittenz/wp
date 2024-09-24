@@ -29,7 +29,7 @@ nav {
 
 main {
   padding: 10px 30px 30px;
-  min-height: calc(100vh - 217px);
+  min-height: calc(100vh - 220px);
 }
 
 footer {
@@ -62,7 +62,7 @@ textarea,
 input[type='text'],
 input[type='email'] {
   box-sizing: border-box;
-  width:300px;
+  width: 300px;
   padding: 10px;
   border: thin solid #321;
   border-radius: 3px;

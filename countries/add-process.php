@@ -45,5 +45,5 @@
   } else {
     echo "<p>There is a problem with the image file.</p>";
   }
-  echo "<p>Return to <a heref='countries.php'>countries gallery page</a>.</p>";
+  echo "<p>Return to <a href='countries.php'>countries gallery page</a>.</p>";
 ?>
