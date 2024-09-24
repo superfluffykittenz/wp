@@ -19,8 +19,9 @@
 /* Add country to the database using a prepared statement */
     $sql = "INSERT INTO country (countryname, description, image, caption) VALUES (?,?,?,?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss",$country, $description, $_FILES['image']['name'], $caption);
+    $stmt->bind_param("ssss",$name, $description, $_FILES['image']['name'], $caption);
     $stmt->execute();
+    print_r($stmt->errorInfo());
 
 /* If a country was added to the database ... */
     if ($stmt->affected_rows > 0) {
