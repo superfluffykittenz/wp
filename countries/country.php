@@ -6,7 +6,7 @@
   $sql = "select * from country where countryid = ?";
 
   $stmt = $conn->prepare($sql);
-  $stmt->bind_param("i",$_GET['id']);
+  $stmt->bind_param("i", $_GET['id']);
   $stmt->execute();
   // print_r($stmt->error);
 

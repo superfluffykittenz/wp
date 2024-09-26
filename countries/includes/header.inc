@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="css/country.css">
     <title><?= $title ?></title>
   </head>
-  <body>
+  <body class="<?= $title ?>">
     <header>
       <h1>🌏🌎🌍 Countries 'R Us!</h1>
     </header>
 <?php include ("nav.inc"); ?>    
-    <main>    
+    <main class="<?= $title ?>">    
       <h2><?= $title ?></h2>

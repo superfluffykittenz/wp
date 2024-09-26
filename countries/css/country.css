@@ -3,6 +3,10 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
 }
 
+body.home {
+  background-color: #AFB;
+}
+
 header {
   background-color: #FED;
   padding: 20px;

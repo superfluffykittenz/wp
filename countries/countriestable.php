@@ -18,11 +18,12 @@
     
       echo "
         <td>{$row['countryname']}</td>
-        <td><image src='images/{$row['image']}'></td>
+        <td><img src='images/{$row['image']}' alt='{$row['countryname']}'></td>
         <td>{$row['caption']}</td>
         <td>🔎 <a href='country.php?id={$row['countryid']}'>Details</a></td>
         <td>✍️ <a href='edit.php?id={$row['countryid']}'>Edit</a></td>
-        <td>❌ Delete</td>";
+        <td>❌ <a href='delete.php?id={$row['countryid']}'>Delete</a></td>
+        ";
     
     echo "</tr>";
   }
