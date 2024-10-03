@@ -33,11 +33,11 @@
     if ($stmt->affected_rows > 0) {
       echo "<p>Country was added to the database.</p>";
 /* ... remove image of same name if it exists ... */      
-      if (file_exists($imagePath.$_FILES['image']['name'])) {
+      if (!empty($_FILES['image']['name']) && file_exists($imagePath.$_FILES['image']['name'])) {
         unlink(($imagePath.$_FILES['image']['name']));
       }
 /* ... move image from tmp folder to images folder ... */      
-      if (move_uploaded_file($_FILES['image']['tmp_name'],$imagePath.$_FILES['image']['name'])) {
+      if (!empty($_FILES['image']['name']) && move_uploaded_file($_FILES['image']['tmp_name'],$imagePath.$_FILES['image']['name'])) {
         echo "<p>File was added to the images directory.</p>";
       } else {
         echo "<p>File was NOT added to the images directory.</p>";
