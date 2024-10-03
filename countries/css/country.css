@@ -50,7 +50,8 @@ footer {
 .gallery-item figure {
   margin: 0px;
 }
-.gallery-item img {
+.gallery-item img,
+form span img {
   height: 200px;
   width: 350px;
   object-fit: cover;

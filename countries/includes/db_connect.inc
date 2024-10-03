@@ -9,7 +9,7 @@ if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
   $username = "root";
   $password = "";
   $dbname = "e54061";
-  $imagePath="/Applications/XAMPP/xamppfiles/htdocs/~e54061/public_html/wp/countries/images/";
+  $imagePath="/Applications/XAMPP/xamppfiles/htdocs/~e54061/wp/countries/images/";
 } else {
   $servername = "talsprddb02.int.its.rmit.edu.au";
   $username = "e54061";
