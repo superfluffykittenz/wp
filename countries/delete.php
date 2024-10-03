@@ -4,19 +4,21 @@
   pre($_GET);
 
   $sqlNoWait = "SELECT image FROM country WHERE countryid = ?";
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("i", $_GET['id']);
+  $stmt = $conn->prepare($sqlNoWait);
+  $stmt->bind_param("s", $_GET['id']);
   $stmt->execute();
 
   $result = $stmt->get_result();
   $row = $result->fetch_assoc();
   $imageToDelete = $imagePath.$row['image']; 
 
+  pre([$sqlNoWait,$imageToDelete]);
+
   $sql = "DELETE FROM country WHERE countryid = ?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param(
     "s",
-    $_POST['countryid']
+    $_GET['id']
   );
   
 /* Delete country in the database using a prepared statement */
