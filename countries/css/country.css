@@ -82,6 +82,7 @@ label {
 
 textarea,
 input[type='text'],
+input[type='password'],
 input[type='email'] {
   box-sizing: border-box;
   width: 300px;
@@ -89,3 +90,14 @@ input[type='email'] {
   border: thin solid #321;
   border-radius: 3px;
 }
+
+form.loginregister {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto 1fr;
+
+  & > * {
+    align-self: center;
+  }
+}
+

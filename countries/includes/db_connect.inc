@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 // Enable all errors, otherwise pages will fail silently ...
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -27,9 +30,15 @@ if ($conn->connect_error) {
 }
 
 // Debugging function
-function pre($var) {
-  echo "<pre>";
-  print_r($var);
-  echo "</pre>";
+function pre(&$var) {
+  if (!isset($var)) {
+    echo "Variable not set";
+  } else if(empty($var)) {
+    echo "Variable empty or 0 or ''";
+  } else {
+    echo "<pre>";
+    print_r($var);
+    echo "</pre>";
+  } 
 }
 ?>

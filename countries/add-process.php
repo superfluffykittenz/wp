@@ -1,9 +1,6 @@
 <?php
   include("includes/db_connect.inc");
 
-  pre($_POST);
-  pre($_FILES);
-
 /* Check if the image uploaded and is an image */  
   if (
     $_FILES['image']['error'] == 0 &&
